@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+  data:
+    mongodb:
+      database: order
+      host: localhost
+      port: 27017
+      username: mongo
+      password: mongo
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              ReactiveMongoTemplate: DEBUG

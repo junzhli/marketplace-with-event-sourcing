@@ -1,0 +1,30 @@
+server:
+    port: 9999
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        username: postgres
+        password: postgres
+        url: jdbc:postgresql://localhost:5432/account
+    jpa:
+        generate-ddl: false
+        hibernate:
+            ddl-auto: none
+    kafka:
+        bootstrap-servers: localhost:9092
+logging:
+    level:
+        root: INFO
+        org.springframework:
+            transaction:
+                interceptor: TRACE
+        springframework:
+            orm:
+                jpa: DEBUG
+            transaction: DEBUG
+        org.hibernate:
+            transaction: DEBUG
+            SQL: DEBUG
+            type.descriptor.sql.BasicBinder: TRACE
+debug: true
+

@@ -1,0 +1,11 @@
+rootProject.name = 'spring-marketplace'
+
+include 'common'
+include 'account'
+include 'order'
+include 'order-view'
+
+
+
+
+
