@@ -11,6 +11,7 @@ It also needs the following components
 * Postgres
 * MongoDB
 * Redis
+* Kafka
 
 Set up for running locally
   * `docker-compose up -d`
