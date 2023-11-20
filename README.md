@@ -35,9 +35,9 @@ Set up for running locally
 ```shell
 ./gradlew :order:bootRun
 ```
+Query through graphql under path `/graphiql`
 
 ### TODO
 * Swagger
-* GraphQL as user facing api on `order-view`
 * Authentication
 * Test cases

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @Service
 public class OrderServiceImpl implements OrderService {
     @Autowired
@@ -29,6 +31,10 @@ public class OrderServiceImpl implements OrderService {
     public Flux<Order> findByOrderId(String orderId) {
 
         return orderRepository.findByOrderId(Mono.just(orderId));
+    }
+
+    public Flux<Order> findByOrderIds(List<String> orderId) {
+        return orderRepository.findByOrderIdIn(orderId);
     }
 
     @Override

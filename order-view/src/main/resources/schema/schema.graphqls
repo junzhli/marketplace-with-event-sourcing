@@ -1,0 +1,26 @@
+scalar BigDecimal
+
+type Query {
+    orders(ids: [String]): [Order]
+}
+
+type Order {
+    id: ID
+    orderState: OrderState
+    amount: BigDecimal
+    shippingMethod: ShippingMethod
+    accountId: String
+}
+
+enum OrderState {
+    CREATED,
+    VERIFIED,
+    COMPLETED,
+    CANCELLED
+}
+
+enum ShippingMethod {
+    HOME_DELIVERY,
+    CONVENIENCE_STORE_PICK_UP,
+    IN_STORE_PICK_UP
+}
